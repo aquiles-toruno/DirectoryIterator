@@ -1,0 +1,30 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Contracts\**" />
+    <Compile Remove="Models\**" />
+    <EmbeddedResource Remove="Contracts\**" />
+    <EmbeddedResource Remove="Models\**" />
+    <None Remove="Contracts\**" />
+    <None Remove="Models\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Remove="CollectionEnumerator.cs" />
+    <Compile Remove="CustomDirectory.cs" />
+    <Compile Remove="CustomDirectoryCollection.cs" />
+    <Compile Remove="InaccessiblePathCollection.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CustomIDirectoryIterator\CustomDirectoryIterator.csproj" />
+  </ItemGroup>
+
+</Project>

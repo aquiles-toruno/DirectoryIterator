@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.3.32819.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DirectoryIterator", "DirectoryIterator\DirectoryIterator.csproj", "{6B59798C-F8E5-47B9-A83A-A8C72E4FDAAB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CustomDirectoryIterator", "CustomIDirectoryIterator\CustomDirectoryIterator.csproj", "{1871AA47-9096-44E4-8998-B3465AAFC9C6}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6B59798C-F8E5-47B9-A83A-A8C72E4FDAAB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6B59798C-F8E5-47B9-A83A-A8C72E4FDAAB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6B59798C-F8E5-47B9-A83A-A8C72E4FDAAB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6B59798C-F8E5-47B9-A83A-A8C72E4FDAAB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1871AA47-9096-44E4-8998-B3465AAFC9C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1871AA47-9096-44E4-8998-B3465AAFC9C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1871AA47-9096-44E4-8998-B3465AAFC9C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1871AA47-9096-44E4-8998-B3465AAFC9C6}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {707AD1B6-38A9-4E81-AF73-2A12A4591240}
+	EndGlobalSection
+EndGlobal
