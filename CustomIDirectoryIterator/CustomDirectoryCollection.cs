@@ -13,16 +13,16 @@ namespace CustomDirectoryIterator
     {
         private string _path;
         private readonly string _rootPath;
-        private readonly int? _maxParallelProcess;
+        private readonly bool _recursive;
         private readonly IInaccessiblePathCollection _inaccessiblePaths;
         private readonly TasksManager<IEnumerable<string>> _tasks;
 
         public IInaccessiblePathCollection InaccessiblePathCollection => _inaccessiblePaths;
 
-        public CustomDirectoryCollection(string path, int? maxParallelProcess = default)
+        public CustomDirectoryCollection(string path, bool recursive = false, int? maxParallelProcess = default)
         {
             _path = _rootPath = path;
-            _maxParallelProcess = maxParallelProcess;
+            _recursive = recursive;
             _inaccessiblePaths = new InaccessiblePathCollection();
             _tasks = new TasksManager<IEnumerable<string>>();
 
@@ -55,13 +55,16 @@ namespace CustomDirectoryIterator
                 _inaccessiblePaths.Add(new InaccessiblePath(_path, ex));
             }
 
-            var awaiter = IterateDirectoriesAsync(directories).GetAwaiter();
-            var childrenDirectories = awaiter.GetResult();
-
             foreach (var directory in directories)
             {
                 yield return directory;
             }
+
+            if (!_recursive)
+                yield break;
+
+            var awaiter = IterateDirectoriesAsync(directories).GetAwaiter();
+            var childrenDirectories = awaiter.GetResult();
 
             foreach (var directory in childrenDirectories)
             {
